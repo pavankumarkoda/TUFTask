@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Code Submission Form</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .form-container {
+    background-color: #87CEEB; 
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+  }
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  .form-group label {
+    display: block;
+    margin-bottom: .5rem;
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: .5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  .form-group textarea {
+    height: 100px;
+    resize: none;
+  }
+  .form-submit {
+    background-color: #5cb85c;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  .form-submit:hover {
+    background-color: #4cae4c;
+  }
+  
+  #source-code {
+    max-width: 100ch;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+</style>
+</head>
+<body>
+<div class="form-container">
+    <h1> TUF Task</h1>
+  <form action="DJsp.jsp" method="post">
+    <div class="form-group">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required placeholder="enter your username">
+    </div>
+    <div class="form-group">
+      <label for="code-language">Preferred Code Language:</label>
+      <select id="code-language" name="code_language" required>
+          <option >select</option>
+        <option value="C++">C++</option>
+        <option value="Java">Java</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="Python">Python</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="stdin">Standard Input (stdin):</label>
+      <textarea id="stdin" name="stdin" required  placeholder="Standard Input"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="source-code">Source Code:</label>
+      <textarea id="source-code" name="source_code" required placeholder="source code"></textarea>
+    </div>
+    <input type="submit" value="Submit" class="form-submit">
+  </form>
+</div>
+</body>
+</html>
